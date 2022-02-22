@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>編集｜GTFS-JP Generator</title>
+    <meta name="description" content="Webベースの標準的なバス情報フォーマット（GTFS-JP）作成ツールです。">
+    <link rel="canonical" href="https://terachan0117.github.io/gtfs-jp-generator/">
+
+    <link rel="icon" href="favicon.ico">
+    <meta property="og:title" content="GTFS-JP Generator" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terachan0117.github.io/gtfs-jp-generator/" />
+    <meta property="og:image" content="https://terachan0117.github.io/gtfs-jp-generator/ogp.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script>
+        var files = ["./lib/bootstrap.min.css", "./lib/leaflet.css", "./css/theme.css"];
+        for (var i = 0; i < files.length; i++) {
+            document.write(
+                '<link rel="stylesheet" href="' + files[i] + '?' + Date.now() + '">'
+            );
+        }
+    </script>
+</head>
+
+<body class="bg-white">
+    <header>
+        <nav class="navbar navbar-light shadow">
+            <a class="navbar-brand" href="index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 24 24" width="30px" fill="#000000"
+                    role="img" aria-label="GTFS-JP Generator のアイコン">
+                    <path d="M0 0h24v24H0V0z" fill="none" />
+                    <path
+                        d="M12 2c-4.42 0-8 .5-8 4v10c0 .88.39 1.67 1 2.22V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h8v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1.78c.61-.55 1-1.34 1-2.22V6c0-3.5-3.58-4-8-4zm5.66 2.99H6.34C6.89 4.46 8.31 4 12 4s5.11.46 5.66.99zm.34 2V10H6V6.99h12zm-.34 9.74l-.29.27H6.63l-.29-.27C6.21 16.62 6 16.37 6 16v-4h12v4c0 .37-.21.62-.34.73z" />
+                    <circle cx="8.5" cy="14.5" r="1.5" />
+                    <circle cx="15.5" cy="14.5" r="1.5" />
+                </svg>
+                GTFS-JP Generator
+            </a>
+        </nav>
+    </header>
+    <main class="py-3">
+        <div class="container-fluid">
+            <div class="alert alert-secondary alert-dismissible fade show" role="alert">
+                <strong>ようこそ！</strong> こちら↓からZIPファイルを読み込んでください（第2版・第3版のGTFS-JPデータを読み込めます）
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="row">
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5 col-6 sticky vh-100 overflow-auto">
+                    <div class="form-group">
+                        <label for="inputFile">既存のZIPファイルを読み込む</label>
+                        <div class="custom-file shadow">
+                            <input type="file" class="custom-file-input input-inport" id="inputFile" accept=".zip">
+                            <label class="custom-file-label" for="inputFile" data-browse="参照">選択されていません</label>
+                        </div>
+                    </div>
+                    <div class="nav flex-column nav-pills rounded shadow mb-3" id="v-pills-tab" role="tablist"
+                        aria-orientation="vertical">
+                    </div>
+                    <button type="button" class="btn btn-block btn-primary rounded-pill shadow btn-export">
+                        ↓ ダウンロード（.zip）
+                    </button>
+                </div>
+
+                <div class="col-xl-10 col-lg-9 col-md-8 col-sm-7 col-6">
+                    <div class="tab-content" id="v-pills-tabContent">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="modalWrapper"></div>
+    </main>
+
+    <script>
+        var files = ["./lib/jquery.min.js", "./lib/bootstrap.bundle.min.js", "./lib/jszip.min.js",
+            "./lib/FileSaver.min.js", "./lib/leaflet.js", "./lib/stickyfill.min.js", "./js/data.js", "./js/common.js", "./js/inport.js",
+            "./js/export.js"
+        ];
+        for (var i = 0; i < files.length; i++) {
+            document.write(
+                '<script src="' + files[i] + '?' + Date.now() + '"><\/script>'
+            );
+        }
+    </script>
+</body>
+
+</html>

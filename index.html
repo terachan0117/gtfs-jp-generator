@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja" class="h-100">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTFS-JP Generator</title>
+    <meta name="description" content="Webベースの標準的なバス情報フォーマット（GTFS-JP）作成ツールです。">
+    <link rel="canonical" href="https://terachan0117.github.io/gtfs-jp-generator/">
+
+    <link rel="icon" href="favicon.ico">
+    <meta property="og:title" content="GTFS-JP Generator" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://terachan0117.github.io/gtfs-jp-generator/" />
+    <meta property="og:image" content="https://terachan0117.github.io/gtfs-jp-generator/ogp.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="stylesheet" href="./lib/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/theme.css">
+</head>
+
+<body class="bg-white d-flex align-items-center py-5 h-100">
+    <div class="m-auto text-center">
+        <main>
+            <svg xmlns="http://www.w3.org/2000/svg" height="72px" viewBox="0 0 24 24" width="72px" fill="#000000"
+                role="img" aria-label="GTFS-JP Generator のアイコン">
+                <path d="M0 0h24v24H0V0z" fill="none" />
+                <path
+                    d="M12 2c-4.42 0-8 .5-8 4v10c0 .88.39 1.67 1 2.22V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h8v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1.78c.61-.55 1-1.34 1-2.22V6c0-3.5-3.58-4-8-4zm5.66 2.99H6.34C6.89 4.46 8.31 4 12 4s5.11.46 5.66.99zm.34 2V10H6V6.99h12zm-.34 9.74l-.29.27H6.63l-.29-.27C6.21 16.62 6 16.37 6 16v-4h12v4c0 .37-.21.62-.34.73z" />
+                <circle cx="8.5" cy="14.5" r="1.5" />
+                <circle cx="15.5" cy="14.5" r="1.5" />
+            </svg>
+            <h1 class="h2 mb-0 font-weight-normal">GTFS-JP Generator</h1>
+            <p class="mb-3 text-muted">Ver 1.0.0 (20220222)</p>
+            <a class="btn btn-primary btn-block rounded-pill shadow" href="new.html" role="button">新しくGTFS-JPを作成する</a>
+            <a class="btn btn-outline-primary btn-block rounded-pill shadow" href="edit.html"
+                role="button">既存のGTFS-JPを編集する</a>
+
+            <div class="mt-5 text-left">
+                <ul class="list-unstyled">
+                    <li>本ツールのローカル環境動作版: <a
+                            href="https://github.com/terachan0117/gtfs-jp-generator/archive/refs/heads/master.zip"
+                            target="_blank" rel="noopener">ダウンロード ↓</a></li>
+                    <li>本ツールについての連絡先: <a href="mailto:teradaissei17@gmail.com" target="_blank"
+                            rel="noopener">teradaissei17@gmail.com →</a></li>
+                    <li>静的バス情報フォーマット（GTFS-JP）の仕様について: <a
+                            href="https://www.mlit.go.jp/sogoseisaku/transport/content/001419163.pdf" target="_blank"
+                            rel="noopener">国土交通省 静的バス情報フォーマット（GTFS-JP）仕様書［第 3 版］ →</a></li>
+                    <li>データの配信方法について: <a href="https://www.mlit.go.jp/sogoseisaku/transport/content/001427420.pdf"
+                            target="_blank" rel="noopener">国土交通省 バス情報配信方法ガイドライン →</a></li>
+                    <li>完成後のデータチェックツール: <a href="http://gtfsvalidator.omnimodal.io/upload" target="_blank"
+                            rel="noopener">GTFS Meta-Validator →</a> <a
+                            href="https://tshimada291.sakura.ne.jp/transport/gtfs-viewer/test-vw/" target="_blank"
+                            rel="noopener">GTFS Test Viewer →</a></li>
+                </ul>
+            </div>
+        </main>
+        <footer class="mt-5 pt-3 border-top text-left">
+            <small class="d-block">このサイトの内容物は <a href="https://creativecommons.org/licenses/by/4.0/deed.ja"
+                    target="_blank" rel="noopener">クリエイティブ・コモンズ 表示 4.0 ライセンス →</a>
+                の下に提供されています（ただし商標等の他団体が権利を持つものは除く）。</small>
+            <small class="d-block text-muted">&copy; 2022 Issei Terada</small>
+        </footer>
+    </div>
+</body>
+
+</html>
